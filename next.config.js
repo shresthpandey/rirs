@@ -21,9 +21,9 @@ const nextConfig = {
     ];
   },
   // Vercel-specific optimizations
-  experimental: {
-    optimizeCss: true,
-  },
+  // experimental: {
+  //   optimizeCss: true,
+  // },
   // Ensure compatibility with Vercel
   trailingSlash: false,
   // Handle static exports for better performance

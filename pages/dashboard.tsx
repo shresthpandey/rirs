@@ -7,8 +7,8 @@ import {
   ExclamationTriangleIcon,
   ShieldCheckIcon,
   BellIcon,
-  TrendingUpIcon,
-  TrendingDownIcon,
+  ArrowTrendingUpIcon as TrendingUpIcon,
+  ArrowTrendingDownIcon as TrendingDownIcon,
   PlusIcon,
   EyeIcon
 } from '@heroicons/react/24/outline';

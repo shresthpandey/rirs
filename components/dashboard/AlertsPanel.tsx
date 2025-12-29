@@ -10,10 +10,10 @@ import { Button } from '../ui/Button';
 
 interface Alert {
   id: string;
-  type: 'risk' | 'fraud' | 'concentration' | 'volatility' | 'info';
+  type: string;
   title: string;
   message: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  severity: string;
   timestamp: string;
 }
 
@@ -22,7 +22,7 @@ interface AlertsPanelProps {
 }
 
 export const AlertsPanel = ({ alerts }: AlertsPanelProps) => {
-  const getAlertIcon = (type: Alert['type']) => {
+  const getAlertIcon = (type: string) => {
     switch (type) {
       case 'fraud':
         return ShieldExclamationIcon;
@@ -30,12 +30,14 @@ export const AlertsPanel = ({ alerts }: AlertsPanelProps) => {
       case 'concentration':
       case 'volatility':
         return ExclamationTriangleIcon;
-      default:
+      case 'info':
         return InformationCircleIcon;
+      default:
+        return ExclamationTriangleIcon;
     }
   };
 
-  const getAlertColor = (severity: Alert['severity']) => {
+  const getAlertColor = (severity: string) => {
     switch (severity) {
       case 'critical':
         return {

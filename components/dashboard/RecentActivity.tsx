@@ -10,7 +10,7 @@ import { Card } from '../ui/Card';
 
 interface Activity {
   id: string;
-  type: 'scan' | 'alert' | 'analysis' | 'report' | 'update';
+  type: string;
   title: string;
   description: string;
   timestamp: string;
@@ -21,7 +21,7 @@ interface RecentActivityProps {
 }
 
 export const RecentActivity = ({ activities }: RecentActivityProps) => {
-  const getActivityIcon = (type: Activity['type']) => {
+  const getActivityIcon = (type: string) => {
     switch (type) {
       case 'scan':
         return ChartBarIcon;
@@ -31,12 +31,14 @@ export const RecentActivity = ({ activities }: RecentActivityProps) => {
         return ShieldCheckIcon;
       case 'report':
         return DocumentTextIcon;
-      default:
+      case 'update':
         return ClockIcon;
+      default:
+        return ChartBarIcon;
     }
   };
 
-  const getActivityColor = (type: Activity['type']) => {
+  const getActivityColor = (type: string) => {
     switch (type) {
       case 'scan':
         return 'text-primary-600 bg-primary-100 dark:bg-primary-900 dark:text-primary-400';

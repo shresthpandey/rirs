@@ -1,5 +1,4 @@
 import { ButtonHTMLAttributes, forwardRef } from 'react';
-import { motion } from 'framer-motion';
 import clsx from 'clsx';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -19,7 +18,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     children, 
     ...props 
   }, ref) => {
-    const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
+    const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 active:scale-95';
     
     const variants = {
       primary: 'bg-primary-600 hover:bg-primary-700 text-white focus:ring-primary-500',
@@ -36,7 +35,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     return (
-      <motion.button
+      <button
         ref={ref}
         className={clsx(
           baseClasses,
@@ -45,8 +44,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className
         )}
         disabled={disabled || loading}
-        whileHover={{ scale: disabled || loading ? 1 : 1.02 }}
-        whileTap={{ scale: disabled || loading ? 1 : 0.98 }}
         {...props}
       >
         {loading && (
@@ -72,7 +69,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           </svg>
         )}
         {children}
-      </motion.button>
+      </button>
     );
   }
 );

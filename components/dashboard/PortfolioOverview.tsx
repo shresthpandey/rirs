@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  TrendingUpIcon, 
-  TrendingDownIcon,
+  ArrowTrendingUpIcon as TrendingUpIcon, 
+  ArrowTrendingDownIcon as TrendingDownIcon,
   EyeIcon,
   PlusIcon 
 } from '@heroicons/react/24/outline';
