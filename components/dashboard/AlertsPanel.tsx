@@ -5,8 +5,8 @@ import {
   InformationCircleIcon,
   XMarkIcon
 } from '@heroicons/react/24/outline';
-import { Card } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
+import { Card } from '../ui/Card';
+import { Button } from '../ui/Button';
 
 interface Alert {
   id: string;

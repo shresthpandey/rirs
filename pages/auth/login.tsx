@@ -4,9 +4,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { EyeIcon, EyeSlashIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
+import { useAuth } from '../../hooks/useAuth';
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
 
 const LoginPage: NextPage = () => {
   const [formData, setFormData] = useState({

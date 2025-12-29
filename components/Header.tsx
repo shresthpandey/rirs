@@ -10,8 +10,8 @@ import {
   MoonIcon,
   UserCircleIcon
 } from '@heroicons/react/24/outline';
-import { useAuth } from '@/hooks/useAuth';
-import { useTheme } from '@/hooks/useTheme';
+import { useAuth } from '../hooks/useAuth';
+import { useTheme } from '../hooks/useTheme';
 import { Button } from './ui/Button';
 
 export const Header = () => {

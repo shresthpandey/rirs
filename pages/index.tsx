@@ -12,9 +12,9 @@ import {
   ArrowRightIcon,
   CheckIcon
 } from '@heroicons/react/24/outline';
-import Layout from '@/components/Layout';
-import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
+import Layout from '../components/Layout';
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
 
 const HomePage: NextPage = () => {
   const features = [

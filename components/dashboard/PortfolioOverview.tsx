@@ -6,8 +6,8 @@ import {
   EyeIcon,
   PlusIcon 
 } from '@heroicons/react/24/outline';
-import { Card } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
+import { Card } from '../ui/Card';
+import { Button } from '../ui/Button';
 import { RiskMeter } from './RiskMeter';
 
 interface Portfolio {

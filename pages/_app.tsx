@@ -1,9 +1,9 @@
 import type { AppProps } from 'next/app';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Toaster } from 'react-hot-toast';
-import { ThemeProvider } from '@/hooks/useTheme';
-import { AuthProvider } from '@/hooks/useAuth';
-import '@/styles/globals.css';
+import { ThemeProvider } from '../hooks/useTheme';
+import { AuthProvider } from '../hooks/useAuth';
+import '../styles/globals.css';
 
 const queryClient = new QueryClient({
   defaultOptions: {

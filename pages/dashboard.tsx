@@ -12,14 +12,14 @@ import {
   PlusIcon,
   EyeIcon
 } from '@heroicons/react/24/outline';
-import Layout from '@/components/Layout';
-import { Card } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { useAuth } from '@/hooks/useAuth';
-import { RiskMeter } from '@/components/dashboard/RiskMeter';
-import { PortfolioOverview } from '@/components/dashboard/PortfolioOverview';
-import { AlertsPanel } from '@/components/dashboard/AlertsPanel';
-import { RecentActivity } from '@/components/dashboard/RecentActivity';
+import Layout from '../components/Layout';
+import { Card } from '../components/ui/Card';
+import { Button } from '../components/ui/Button';
+import { useAuth } from '../hooks/useAuth';
+import { RiskMeter } from '../components/dashboard/RiskMeter';
+import { PortfolioOverview } from '../components/dashboard/PortfolioOverview';
+import { AlertsPanel } from '../components/dashboard/AlertsPanel';
+import { RecentActivity } from '../components/dashboard/RecentActivity';
 
 const DashboardPage: NextPage = () => {
   const { user } = useAuth();
